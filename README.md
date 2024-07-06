@@ -2,11 +2,11 @@
 
 Olá, seja bem-vindo ao meu repositório de estudo sobre GIT, onde eu documento por meio deste _README_ comandos que antes eram desconhecidos por mim ou pouco aprofundados e que podem ajudar a resolver situações críticas no cotidiano como desenvolvedor.
 
-### Comandos GIT
+### Comandos GIT 💡
 
 Situação: Após clonar um repositório e realizar modificações nele, mudou de ideia e quer voltar ao estado original do último commit.
 
-**Sequência de comandos:**
+**Sequência de comandos:** 
 
 - ```git reset``` (tira tudo que está no stage (adicionado para ser commitado) e volta para a área de alterações não rastreadas)
 - ```git clean -df``` (remove todos os arquivos e diretórios criados)
@@ -30,4 +30,12 @@ Situação: Após deletar commits do repositório local, existe a necessidade de
 
 Situação: Você está trabalhando em um repositório que vários desenvolvedores sobem atualizações sobre o código e precisa atualizar seu repositório local para que fica igual como está no repositório remoto.
 
-**Comando:** ```git pull origin <nomeBranch>``` (busca "o que está diferente" do repositório remoto e realiza alterações no repositório local para torná--los iguais)
+**Comando:** ```git pull origin <nomeBranch>``` (busca "o que está diferente" do repositório remoto e realiza alterações no repositório local para torná-los iguais)
+
+Situação: Foi realizada modificações no repositório remoto no arquivo X, mas na sua máquina local este mesmo o arquivo X está desatualizado. Caso realize edições localmente no mesmo arquivo X o git irá "se perder", pois não saberá qual versão deverá manter: a que você estaria prestes a enviar ou a que já existe no repositório remoto.
+
+**O que fazer?** 🧠
+
+➡️ É preciso realizar sinalizar ao git qual versão do arquivo é a 'certa' a ser commitada. Fazemos isso excluindo o trecho de código indesejado e mantendo o novo código (**Incoming Change**, fruto das alterações realizadas localmente ou **Current Change**, que é a versão do arquivo presente no repositório remoto)
+![teste](./imagens/image.png)
+Após realizar as novas modificações, é possível adicioná-las com ``git add <nomeArquivo> ou .``, subir para stage com ``git commit -m <nomeBranch>`` e salvar as alterações em seu repositório remoto com ``git push``. O conflito de merge **não deve acontecer**.
