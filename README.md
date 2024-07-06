@@ -28,7 +28,7 @@ Situação: Após deletar commits do repositório local, existe a necessidade de
 
 **Comando:** ```git push origin HEAD --force``` ou ```git push -f``` (obriga a tornar o head do repositório remoto para o mesmo que está localmente)
 
-Situação: Você está trabalhando em um repositório que vários desenvolvedores sobem atualizações sobre o código e precisa atualizar seu repositório local para que fica igual como está no repositório remoto.
+Situação: Você está trabalhando em um repositório que vários desenvolvedores fazem atualizações sobre o código e precisa atualizar seu repositório local para que fica igual como está no repositório remoto.
 
 **Comando:** ```git pull origin <nomeBranch>``` (busca "o que está diferente" do repositório remoto e realiza alterações no repositório local para torná-los iguais)
 
@@ -38,7 +38,7 @@ Situação: Foi realizada modificações no repositório remoto no arquivo X, ma
 
 ➡️ É preciso realizar sinalizar ao git qual versão do arquivo é a 'certa' a ser commitada. Fazemos isso excluindo o trecho de código indesejado e mantendo o novo código (**Incoming Change**, fruto das alterações realizadas localmente ou **Current Change**, que é a versão do arquivo presente no repositório remoto).
 ![teste](./imagens/image.png)
-Após realizar as novas modificações, é possível adicioná-las com ``git add <nomeArquivo> ou .``, subir para stage com ``git commit -m <nomeBranch>`` e salvar as alterações em seu repositório remoto com ``git push``. O conflito de merge **não deve acontecer**.
+Após realizar as novas modificações, é possível adicioná-las com ``git add <nomeArquivo> ou .``, commitá-las com ``git commit -m <nomeBranch>`` e salvar as alterações em seu repositório remoto com ``git push``. O conflito de merge **não deve acontecer**.
 
 Situação: Você precisa visualizar qual o repositório git que seu projeto local está vinculado.
 
@@ -46,7 +46,7 @@ Situação: Você precisa visualizar qual o repositório git que seu projeto loc
 
 Situação: Você precisa adicionar um novo vínculo de repositório remoto com a sua máquina/projeto local.
 
-***Comando:** ```git remote add origin <urlRepositorio.git>``` (vincula o repositório local com o repositório remoto criado)
+**Comando:** ```git remote add origin <urlRepositorio.git>``` (vincula o repositório local com o repositório remoto criado)
 
 Situação: Existe a necessidade de trocar o repositório remoto associado ao projeto local.
 
