@@ -32,14 +32,6 @@ Situação: Você está trabalhando em um repositório que vários desenvolvedor
 
 **Comando:** ```git pull origin <nomeBranch>``` (busca "o que está diferente" do repositório remoto e realiza alterações no repositório local para torná-los iguais)
 
-Situação: Foi realizada modificações no repositório remoto no arquivo X, mas na sua máquina local este mesmo o arquivo X está desatualizado. Caso realize edições localmente no mesmo arquivo X o git irá "se perder", pois não saberá qual versão deverá manter: a que você estaria prestes a enviar ou a que já existe no repositório remoto.
-
-**O que fazer?** 🧠
-
-➡️ É preciso realizar sinalizar ao git qual versão do arquivo é a 'certa' a ser commitada. Fazemos isso excluindo o trecho de código indesejado e mantendo o novo código (**Incoming Change**, fruto das alterações realizadas localmente ou **Current Change**, que é a versão do arquivo presente no repositório remoto).
-![teste](./imagens/image.png)
-Após realizar as novas modificações, é possível adicioná-las com ``git add <nomeArquivo> ou .``, commitá-las com ``git commit -m <nomeBranch>`` e salvar as alterações em seu repositório remoto com ``git push``. O conflito de merge **não deve acontecer**.
-
 Situação: Você precisa visualizar qual o repositório git que seu projeto local está vinculado.
 
 **Comando:** ``git remote -v`` (exibe no terminal quais os remotes associados ao projeto local)
@@ -51,3 +43,13 @@ Situação: Você precisa adicionar um novo vínculo de repositório remoto com 
 Situação: Existe a necessidade de trocar o repositório remoto associado ao projeto local.
 
 **Comando:** ``git remote set-url origin <urlRepositorio.git>`` (troca a referência do origin, 'apontando' para a nova url informada)
+
+### Resolvendo conflito de merge 🧠
+
+Contexto: Foi realizada modificações no repositório remoto no arquivo X, mas na sua máquina local este mesmo o arquivo X está desatualizado. Caso realize edições localmente no mesmo arquivo X o git irá "se perder", pois não saberá qual versão deverá manter: a que você estaria prestes a enviar ou a que já existe no repositório remoto.
+
+**O que fazer?**
+
+É preciso realizar sinalizar ao git qual versão do arquivo é a 'certa' a ser commitada. Fazemos isso excluindo o trecho de código indesejado e mantendo o novo código (**Incoming Change**, fruto das alterações realizadas localmente ou **Current Change**, que é a versão do arquivo presente no repositório remoto).
+![teste](./imagens/image.png)
+Após realizar as novas modificações, é possível adicioná-las com ``git add <nomeArquivo> ou .``, commitá-las com ``git commit -m <nomeBranch>`` e salvar as alterações em seu repositório remoto com ``git push``. O conflito de merge **não deve acontecer**.
