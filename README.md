@@ -28,8 +28,6 @@ Situação: Após deletar commits do repositório local, existe a necessidade de
 
 **Comando:** ```git push origin HEAD --force``` (obriga a tornar o head do repositório remoto para o mesmo que está localmente)
 
-Situação: Você está trabalhando em um repositório que vários desenvolvedorem sobem atualizações sobre o código e precisa atualizar seu repositório local para que fica igual como está no repositório remoto.
+Situação: Você está trabalhando em um repositório que vários desenvolvedores sobem atualizações sobre o código e precisa atualizar seu repositório local para que fica igual como está no repositório remoto.
 
-**Comando:** 
-git pull origin <nomeBranch>
- (busca "o que está diferente" do repositório remoto e realiza alterações no repositório local para torná--los iguais)
+**Comando:** ```git pull origin <nomeBranch>``` (busca "o que está diferente" do repositório remoto e realiza alterações no repositório local para torná--los iguais)
