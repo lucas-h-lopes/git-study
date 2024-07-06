@@ -1,4 +1,8 @@
-# Sobre
+# git-study 
+
+<img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git Badge">
+
+# Sobre 
 
 Olá, seja bem-vindo ao meu repositório de estudo sobre GIT, onde eu documento por meio deste _README_ comandos que antes eram desconhecidos por mim ou pouco aprofundados e que podem ajudar a resolver situações críticas no cotidiano como desenvolvedor.
 
@@ -27,3 +31,9 @@ Situação: Após deletar commits do repositório local, existe a necessidade de
 ⚠️ **ATENÇÃO:** Ao deletar os commits do repositório remoto, não será possível recuperar os arquivos dos commits excluídos.
 
 **Comando:** ```git push origin HEAD --force``` (obriga a tornar o head do repositório remoto para o mesmo que está localmente)
+
+Situação: Você está trabalhando em um repositório que vários desenvolvedorem sobem atualizações sobre o código e precisa atualizar seu repositório local para que fica igual como está no repositório remoto.
+
+**Comando:** 
+git pull origin <nomeBranch>
+ (busca "o que está diferente" do repositório remoto e realiza alterações no repositório local para torná--los iguais)
