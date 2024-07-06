@@ -1,6 +1,4 @@
-# git-study <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git Badge">
-
-# Sobre 
+# git-study <img align="center" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git Badge">
 
 Olá, seja bem-vindo ao meu repositório de estudo sobre GIT, onde eu documento por meio deste _README_ comandos que antes eram desconhecidos por mim ou pouco aprofundados e que podem ajudar a resolver situações críticas no cotidiano como desenvolvedor.
 
