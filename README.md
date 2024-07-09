@@ -44,6 +44,24 @@ Situação: Existe a necessidade de trocar o repositório remoto associado ao pr
 
 **Comando:** ``git remote set-url origin <urlRepositorio.git>`` (troca a referência do origin, 'apontando' para a nova url informada)
 
+Situação: É necessário remover temporariamente modificações realizadas no código. Estas modificações não podem ser descartadas mas ainda não podem ser commitadas, pois não está finalizada. Suponha que foi iniciado o desenvolvimento de uma nova funcionalidade e surge a necessidade de fazer um pull para obter localmente a versão mais atualizada do projeto, ou de fazer um push dos commits locais sem enviar o código que ainda nao está pronto.
+
+**Comando:** ``git stash`` (move as alterações recentes para um lugar seguro denominado 'stash', as alterações podem ser resgatadas dessa área com o comando ``git stash apply``)
+
+### Restaurando trabalho excluído 🔙
+
+Após excluir acidentalmente um commit ou uma branch, você pode usar o comando `git reflog` para encontrar o código (id) do commit perdido. 
+
+Passos:
+
+- Identifique o código do commit excluído com ``git reflog``;
+- Volte para o commit perdido com ``git checkout <idCommitExcluido>``;
+- Crie uma nova branch a partir deste commit: ``git checkout -b <branchNova>``;
+- Retorne para a branch principal utilizando ``git checkout main (ou master)``;
+- Execute o merge com o comando ``git merge <nomeBranchNova>``.
+
+Após executar os passos acima, os arquivos que antes estavam perdidos estarão na branch principal.
+
 ### Resolvendo conflito de merge 🧠
 
 Contexto: Foi realizada modificações no repositório remoto no arquivo X, mas na sua máquina local este mesmo o arquivo X está desatualizado. Caso realize edições localmente no mesmo arquivo X o git irá "se perder", pois não saberá qual versão deverá manter: a que você estaria prestes a enviar ou a que já existe no repositório remoto.
