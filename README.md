@@ -24,7 +24,7 @@ Situação: Você deseja ver o log dos commits de um projeto.
 
 Situação: Após realizar um commit indesejado, você deseja apagar um ou mais commits que foram feitos no projeto.
 
-Comando:** ```git reset --hard <idCommit>``` (deleta todos os commits que foram feitos posteriormente ao commit informado e torna ele o HEAD)
+**Comando:** ```git reset --hard <idCommit>``` (deleta todos os commits que foram feitos posteriormente ao commit informado e torna ele o HEAD)
 
 ### 4. Excluir um commit indesejado do repositório remoto
 
